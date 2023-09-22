@@ -26,7 +26,11 @@ This is a low-code demo of:
 
 ## Configuring AWS SSO
 
-You'll need to [configure AWS SSO](https://docs.aws.amazon.com/cli/latest/userguide/sso-configure-profile-token.html) to deploy this app. Once configured, run `CDK_ENV=YOUR_AWS_ACCOUNT_NAME yarn deploy` to deploy to your AWS account. You'll need to make sure that you replace `YOUR_AWS_ACCOUNT_NAME` with the SSO credential name you set up.
+You'll need to [configure AWS SSO](https://docs.aws.amazon.com/cli/latest/userguide/sso-configure-profile-token.html) to deploy this app.
+
+## Deploying
+
+Once configured, run `CDK_ENV=YOUR_AWS_ACCOUNT_NAME yarn deploy` to deploy to your AWS account. You'll need to make sure that you replace `YOUR_AWS_ACCOUNT_NAME` with the SSO credential name you set up.
 
 # Technologies
 
