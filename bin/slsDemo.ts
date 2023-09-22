@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 import 'source-map-support/register';
 import * as cdk from 'aws-cdk-lib';
-import { getCdkEnv } from '../lib/utils/env';
 import { AWS_REGION } from '../src/utils/constants';
 import { SlsDemoStack } from '../lib/slsDemoStack';
+import { getCdkEnv } from '../lib/utils/env';
 
 const app = new cdk.App();
 const env = getCdkEnv();

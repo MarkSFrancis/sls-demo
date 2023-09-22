@@ -1,6 +1,10 @@
 # SLS Demo
 
-This is a serverless demo of State Machines and EventBridge Pipes on AWS
+This is a low-code demo of:
+
+- Lambda-less API Gateway
+- State Machines (WIP)
+- EventBridge Pipes (WIP)
 
 # Getting Started
 
@@ -18,25 +22,11 @@ This is a serverless demo of State Machines and EventBridge Pipes on AWS
 - Open a terminal at the root folder of this project
 - Run `yarn install` to install all dependencies
 
-## Configuring AWS SSO
-
-This repo has some opinions about profiles you have set up in `aws sso`, and what names you use.
-
-This is a minimum example that aligns with this repo's opinions:
-
-```
-[profile dev]
-sso_session = YOUR_SESSION_ID
-sso_account_id = YOUR_AWS_ACCOUNT_ID
-sso_role_name = YOUR_ROLE_NAME
-region = YOUR_AWS_REGION
-```
-
-You can still use this app without the same config, but some `yarn deploy:{env}` scripts won't work for you.
-
 # Deploy
 
-- Run `yarn deploy:dev` to deploy to the dev account
+## Configuring AWS SSO
+
+You'll need to [configure AWS SSO](https://docs.aws.amazon.com/cli/latest/userguide/sso-configure-profile-token.html) to deploy this app. Once configured, run `CDK_ENV=YOUR_AWS_ACCOUNT_NAME yarn deploy` to deploy to your AWS account. You'll need to make sure that you replace `YOUR_AWS_ACCOUNT_NAME` with the SSO credential name you set up.
 
 # Technologies
 
